@@ -1,12 +1,14 @@
-This is a port of the Wox plugin [WoxDictionary](https://github.com/harrynull/WoxDictionary) created by Harry (@harrynull).
+This is a port of the Wox plugin [WoxDictionary](https://github.com/harrynull/WoxDictionary) created by Harry (@harrynull). 
+
+This is a fork of [harrynull's Flow.Launcher.Dictionary](https://github.com/harrynull/Flow.Launcher.Dictionary) with the intention of having less Chinese bits. Not that there is anything wrong with it, but, it feels superfluous and jolting when looking for English terms to have mostly-Pinyin labelled results.
 
 This port is intended to be used for [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher). It will not work for Wox.
 
 To use this plugin:
 
-From Flow Launcher, type `pm install dictionary`
+From Flow Launcher, type `pm install dictionaryEn`
 
-Changes contained in this port:
+Changes contained in this port (by harrynull):
 
 - Upgraded to .Net Core 3.1
 - Changed Wox's plugin library to Flow's plugin library
@@ -17,108 +19,83 @@ Changes contained in this port:
 # WoxDictionary
 ![Demonstration](Images/demo.gif)
 
-这是一个支持中英词语翻译，自动纠正，近义词查找的词典 [Wox](https://github.com/Wox-launcher/Wox) 插件。其大部分功能都支持离线使用。
+Features
 
-This is a [Wox](https://github.com/Wox-launcher/Wox) plugin that supports English/Chinese word translation, word correction and synonym. Most of its functions can work offline.
-
-## 功能 / Features
-
-* 中英互译 English/Chinese word translation
-
-  ![cn_to_en](Images/demo/cn_to_en.png)
-
-  ![en_to_cn](Images/demo/en_to_cn.png)
-
-* 音标 Phonetic
+* Phonetic
 
   ![Phonetic](Images/demo/phonetic.png)
 
-* 中文释义 Translation
+* Definitions
 
-  单词结尾加!t即可触发. Add !t at the end of the word to trigger.
-
-  ![Translation](Images/demo/translation.png)
-
-* 英文定义 Definition
-
-  单词结尾加!d即可触发. Add !d at the end of the word to trigger.
+  Add `!d` at the end of the word to trigger.
 
   ![Definition](Images/demo/definition.png)
 
-* 近义词 Synonym
+* Synonym
 
-  单词结尾加!s即可触发. Add !s at the end of the word to trigger.
+  Add `!s` at the end of the word to trigger.
 
   ![Synonym](Images/demo/synonym.png)
 
-* 变型 Exchanges
+* Exchanges
 
-  单词结尾加!e即可触发. Add !e at the end of the word to trigger.
+  Add `!e` at the end of the word to trigger.
 
   ![Exchanges](Images/demo/exchanges.png)
 
-* 拼写修正 Spelling correction
+* Spelling correction
 
   ![Spelling correction](Images/demo/spelling_correction.png)
 
-* 快捷复制 Word copy
+* Word copy
 
-  按 Alt+Enter 即可复制单词 Pressing Alt+Enter can copy the word.
+  Pressing Alt+Enter can copy the word.
 
-* 单词发音 Pronunciation
+* Pronunciation
 
-  按 Ctrl+Enter 即可读出选中的单词 Pressing Ctrl+Enter can read the selected word.
+  `Ctrl+Enter` can read the selected word. (#TODO is this pronunciation for Mandarin or English?)
 
-* 搜索单词 Search Words
+* Search Words
 
-  选中任何一个!结果即可跳转到设置好的网站 Select any results in the `!` mode can jump to the configured website.
+  Select any results in the `!` mode can jump to the configured website.
 
 
-## 编译 / Compilation
+## Compilation
 
-1. 使用 Visual Studio 编译此项目。 Compile it using Visual Studio.
-2. 运行`generate_dist.bat` 以自动打包。 Pack it using `generate_dist.bat`
+1. Visual Studio - Compile it using Visual Studio.
+2. `generate_dist.bat` - Pack it using `generate_dist.bat`
 
-## 安装 / Installation
+## Installation
 
 ### 
 
-1. 你需要先安装 [Wox](https://github.com/Wox-launcher/Wox)。 
+1. You need to have [Wox](https://github.com/Wox-launcher/Wox) installed first.
 
-   You need to have [Wox](https://github.com/Wox-launcher/Wox) installed first.
+2. (Manual Installation) Copy dist folder to `C:\Users\\{User Name}\AppData\Local\Wox\app-{Version Number}\Plugins\`
 
-2. (手动安装) 复制 dist 文件夹到 `C:\Users\\{User Name}\AppData\Local\Wox\app-{Version Number}\Plugins\`
-
-   (Manual Installation) Copy dist folder to `C:\Users\\{User Name}\AppData\Local\Wox\app-{Version Number}\Plugins\`
-
-   (WPM 安装) 在 Wox 中输入 `wpm install Dictionary`。
+   (WPM) Wox `wpm install Dictionary`
 
    (Wox Plugin Manager) Type `wpm install Dictionary` in your Wox.
 
-3. **下载，解压，复制 [ecdict.db](https://github.com/harrynull/WoxDictionary/releases/tag/dict) 到 `C:\Users\用户名\AppData\Roaming\Wox\Plugins\Dictionary-随机串\dicts`。**
+3. **Download, uncompress and copy [ecdict.db](https://github.com/harrynull/WoxDictionary/releases/tag/dict) to `C:\Users\{your_user_name}\AppData\Roaming\Wox\Plugins\Dictionary-{random_characters}\dicts`.**
 
-   **Download, uncompress and copy [ecdict.db](https://github.com/harrynull/WoxDictionary/releases/tag/dict) to `C:\Users\{your_user_name}\AppData\Roaming\Wox\Plugins\Dictionary-{random_characters}\dicts`.**
-
-4. 打开设置，配置 API tokens.
-
-   Open settings and configure API tokens.
+4. API tokens - Open settings and configure API tokens.
 
 
-## 致谢 / Acknowledgment
+## Acknowledgments
 
 这个项目没有以下伟大项目的帮助是不可能完成的：
 
 The project won't be possible without the help of the following great projects:
 
 * [Wox](https://github.com/Wox-launcher/Wox) Launcher for Windows, an alternative to Alfred and Launchy.
-* [ECDICT](https://github.com/skywind3000/ECDICT) Free English to Chinese Dictionary Database. By Linwei.
 * [SymSpell](https://github.com/wolfgarbe/SymSpell) 1 million times faster through Symmetric Delete spelling correction algorithm. By Wolf Garbe.
 * [Big Huge Thesaurus](https://words.bighugelabs.com/api.php) A very simple API for retrieving the synonyms for any word.
-* [iciba](http://open.iciba.com/?c=api) Chinese traslation API.
+* [Flow.Launcher.Dictionary](https://github.com/harrynull/Flow.Launcher.Dictionary) the original English-Chinese dictionary for Flow, by [harrynull](https://github.com/harrynull)
 
 ## License
 
-This project is released under LGPL 3.0 License.
+I _*think*_ this project is released under LGPL 3.0 License...
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
