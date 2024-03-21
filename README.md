@@ -1,3 +1,5 @@
+# currently unuseable as I am just starting this work
+
 This is a port of the Wox plugin [WoxDictionary](https://github.com/harrynull/WoxDictionary) created by Harry (@harrynull). 
 
 This is a fork of [harrynull's Flow.Launcher.Dictionary](https://github.com/harrynull/Flow.Launcher.Dictionary) with the intention of having less Chinese bits. Not that there is anything wrong with it, but, it feels superfluous and jolting when looking for English terms to have mostly-Pinyin labelled results.
